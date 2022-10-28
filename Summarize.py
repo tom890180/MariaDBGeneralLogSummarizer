@@ -34,8 +34,6 @@ def main(argv):
         if re.search(r'^(-e|--explicit)$', arg):
             explicit = True
 
-    print(explicit)
-
     with open(input) as f:
 
         queryOngoing = False
