@@ -13,7 +13,7 @@ Summarize an MariaDB/MySQL General log, e.g:
 ex:
 
 ```
-$ python3.9 Summarize.py my.log
+$ python Summarize.py my.log
 Total queries: 5
 
 
@@ -22,7 +22,7 @@ Total queries: 5
 ```
 
 ```
-$ python3.9 Summarize.py my.log --explicit
+$ python Summarize.py my.log --explicit
 Total queries: 5
 
 
