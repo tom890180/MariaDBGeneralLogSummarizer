@@ -14,6 +14,8 @@ def addToQueries(query):
         query = re.sub("LIKE\s'.*?'", "LIKE '*'", query)
         query = re.sub("IN\s\(.*?\)", "IN (*)", query)
         query = re.sub("IN\s\"(.*)\"", "IN \"*\"", query)
+        query = re.sub("VALUES\n\s\(\'.*?\'\)", "VALUES (*)", query)
+        query = re.sub("AND '.*' LIKE CONCAT", "AND '*' LIKE CONCAT", query)
 
     global totalQueries
     totalQueries = totalQueries + 1
